@@ -1,12 +1,9 @@
-<aura:component>
-<aura:attribute name="item" type="Camping_Item__c" required="true" 
-        default="{'sobjectType':'Camping_Item__c',
-        'Name':'',
-        'Price__c':0,
-        'Quantity__c':0,
-        'Packed__c':false}" />
-<p><ui:outputText value="{!v.item.Name}" /></p>
-<p>Price: <lightning:formattedNumber value="{!v.item.Price__c}" style="currency" currencyCode="GPB" /></p>
-<p>Quantity: <lightning:formattedNumber value="{!v.item.Quantity__c}" format-style="decimal" /></p>
-<lightning:input type="toggle" label="Packed?" name="packed" checked="{!v.item.Packed__c}" />
+<aura:component implements="force:appHostable" > 
+ 
+<aura:attribute name="item" type="Camping_Item__c" />
+ 
+    <p>Name: <ui:outputText value="{!v.item.Name}" /></p>
+    <p>Price: <ui:outputCurrency value="{!v.item.Price__c}" /></p>
+    <p>Quantity: <ui:outputNumber value="{!v.item.Quantity__c}" /></p>
+    <p>Packed: <ui:outputCheckbox value="{!v.item.Packed__c}" /> </p>
 </aura:component>

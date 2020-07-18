@@ -1,5 +1,18 @@
 ({
-    myAction : function(component, event, helper) {
+    clickCreateItem : function(component, event, helper) {
+        
+        var validCampin = component.find('campinForm').reduce(function(validSoFar, inputComp){
+            inputComp.showHelpMessageIfInvalid();
+            return validSoFar && inputComp.get('v.validity').valid;
+        }, true);
+        if(validCampin){
+           var newCampinItem = component.get("v.newItem");
+           var campings = component.get("v.items"); 
+           campings.push(newCampinItem);
+           component.set("v.items", campings); 
+           component.set("v.newItem", {'sobjectType':'Camping_Item__c','Name':'', 'Price__c':0,'Quantity__c':0,'Packed__c':false});
+         console.log(campings);
+        }
 
     }
 })

@@ -1,5 +1,18 @@
 <aura:component>
-    <h1>
-    <c:campingList />
-</h1>
+   <!-- PAGE HEADER-->
+ <lightning:layoutItem class="slds-page-header slds-page-header--object-home">
+    <lightning:icon iconName="action:goal" alternativeText="My Campin" />
+</lightning:layoutItem>
+<lightning:layoutItem padding="horizontal-small">
+    <div class="page-section page-header">
+        <h1 class="slds-text-heading--label">Campins</h1>
+        <h2 class="slds-text-heading--medium">My Campines</h2>
+    </div>
+</lightning:layoutItem>
+<!-- / PAE HEADER-->
+<!-- NEW CAMPIN FORM -->
+<lightning:layoutItem padding="around-small" size="6">
+    <!--[[campains form goes here]]-->
+</lightning:layoutItem>
+<!-- / NEW CAMPIN FORM-->
 </aura:component>	
