@@ -1,0 +1,84 @@
+declare module "@salesforce/schema/People__c.Id" {
+  const Id:any;
+  export default Id;
+}
+declare module "@salesforce/schema/People__c.IsDeleted" {
+  const IsDeleted:boolean;
+  export default IsDeleted;
+}
+declare module "@salesforce/schema/People__c.Name" {
+  const Name:string;
+  export default Name;
+}
+declare module "@salesforce/schema/People__c.CurrencyIsoCode" {
+  const CurrencyIsoCode:string;
+  export default CurrencyIsoCode;
+}
+declare module "@salesforce/schema/People__c.CreatedDate" {
+  const CreatedDate:any;
+  export default CreatedDate;
+}
+declare module "@salesforce/schema/People__c.CreatedBy" {
+  const CreatedBy:any;
+  export default CreatedBy;
+}
+declare module "@salesforce/schema/People__c.CreatedById" {
+  const CreatedById:any;
+  export default CreatedById;
+}
+declare module "@salesforce/schema/People__c.LastModifiedDate" {
+  const LastModifiedDate:any;
+  export default LastModifiedDate;
+}
+declare module "@salesforce/schema/People__c.LastModifiedBy" {
+  const LastModifiedBy:any;
+  export default LastModifiedBy;
+}
+declare module "@salesforce/schema/People__c.LastModifiedById" {
+  const LastModifiedById:any;
+  export default LastModifiedById;
+}
+declare module "@salesforce/schema/People__c.SystemModstamp" {
+  const SystemModstamp:any;
+  export default SystemModstamp;
+}
+declare module "@salesforce/schema/People__c.Employee_ID__c" {
+  const Employee_ID__c:number;
+  export default Employee_ID__c;
+}
+declare module "@salesforce/schema/People__c.First_Name__c" {
+  const First_Name__c:string;
+  export default First_Name__c;
+}
+declare module "@salesforce/schema/People__c.Last_Name__c" {
+  const Last_Name__c:string;
+  export default Last_Name__c;
+}
+declare module "@salesforce/schema/People__c.Designation__c" {
+  const Designation__c:string;
+  export default Designation__c;
+}
+declare module "@salesforce/schema/People__c.Role__c" {
+  const Role__c:string;
+  export default Role__c;
+}
+declare module "@salesforce/schema/People__c.Phone__c" {
+  const Phone__c:string;
+  export default Phone__c;
+}
+declare module "@salesforce/schema/People__c.Salary__c" {
+  const Salary__c:number;
+  export default Salary__c;
+}
+declare module "@salesforce/schema/People__c.Email__c" {
+  const Email__c:string;
+  export default Email__c;
+}
+declare module "@salesforce/schema/People__c.People_Project__r" {
+  const People_Project__r:any;
+  export default People_Project__r;
+}
+declare module "@salesforce/schema/People__c.People_Project__c" {
+  const People_Project__c:any;
+  export default People_Project__c;
+}
