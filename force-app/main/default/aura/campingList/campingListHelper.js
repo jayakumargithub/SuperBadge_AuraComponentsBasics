@@ -13,5 +13,16 @@
         });
         $A.enqueueAction(action);
 
-    }
+    },
+    // showToast : function(component,event,helper){
+    //     var toastEvent = $A.get("e.force:showToast");
+    //     console.dir(toastEvent);
+    //     toastEvent.setParams({
+    //         "title" : "Campin Create",
+    //         "message" : "The record has been added successfully!",
+    //         type:'ssuccess',
+    //         mode:'pester'
+    //     });
+    //     toastEvent.fire();
+    // }
 })

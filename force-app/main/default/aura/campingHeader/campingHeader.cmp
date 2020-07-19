@@ -1,4 +1,4 @@
-<aura:component>
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
    <!-- PAGE HEADER-->
  <lightning:layoutItem class="slds-page-header slds-page-header--object-home">
     <lightning:icon iconName="action:goal" alternativeText="My Campin" />

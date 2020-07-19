@@ -1,11 +1,11 @@
 ({
     
     doInit : function(component, event, helper) {
-        alert(1);
+      
         var action = component.get("c.getItems");
         action.setCallback(this, function(response){
             var state = response.getState();
-            alert(state);
+           
             if(component.isValid() && state === 'SUCCESS'){
                 component.set("v.items", response.getReturnValue()); 
             }
@@ -25,7 +25,7 @@
            var newCampinItem = component.get("v.newItem"); 
             helper.createItem(component,newCampinItem);
            component.set("v.newItem", {'sobjectType':'Camping_Item__c','Name':'', 'Price__c':0,'Quantity__c':0,'Packed__c':false});
-         
+         helper.showToast(component, event, helper);
         }
 
     }
