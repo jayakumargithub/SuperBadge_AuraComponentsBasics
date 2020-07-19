@@ -7,41 +7,11 @@
                             'Packed__c':false}" />
 <aura:attribute name="items" type="Camping_Item__c[]" />
 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+<aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem}"/>
 
 <div aria-labelledby="newcampinform">
     <!--Boxed Area-->
-        <fieldset class="slds-box slds-theme--default slds-container--large">
-            <legend id="newcampinform" class="slds-text-heading--small slds-p-vertical--small">
-                Add Campin
-            </legend>
-            
-            <!-- CREATE NEW CAMPIN FORM-->
-            <form class="slds-from--stacked">
-                
-                <lightning:input aura:id="campinForm" label="Campin Name"
-                name="campinName"
-                value="{!v.newItem.Name}"
-                required="true"/>
-                
-                <lightning:input aura:id="campinForm" label="Price"
-                                    name="price"
-                                    formatter="currency"
-                                    value="{!v.newItem.Price__c}"/>
-                
-                <lightning:input aura:id="campinForm" label="Quantity"
-                                    name="quantity"
-                                    value="{!v.newItem.Quantity__c}" min="1"
-                                    messageWhenRangeUnderflow="Enter minimum 1 Quantity"/>
-                
-                <lightning:input type="checkbox" aura:id="campinForm" label="Packed?"
-                                    name="packed"
-                                    checked="{!v.newItem.Packed__c}"/>
-                                    
-                <lightning:button label="Create campin" class="slds-m-top--medium" variant="brand" onclick="{!c.clickCreateItem}"/>
-                
-            </form>
-            <!-- / CREATE NEW CAMPIN FORM-->
-        </fieldset>
+      <c:campingListForm />
     <!--/ Boxed Area-->
     
         

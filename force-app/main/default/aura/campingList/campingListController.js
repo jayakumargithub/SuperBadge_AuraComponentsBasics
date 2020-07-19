@@ -15,18 +15,20 @@
         
         
     },
-    clickCreateItem : function(component, event, helper) {
-        
-        var validCampin = component.find('campinForm').reduce(function(validSoFar, inputComp){
-            inputComp.showHelpMessageIfInvalid();
-            return validSoFar && inputComp.get('v.validity').valid;
-        }, true);
-        if(validCampin){
-           var newCampinItem = component.get("v.newItem"); 
-            helper.createItem(component,newCampinItem);
-           component.set("v.newItem", {'sobjectType':'Camping_Item__c','Name':'', 'Price__c':0,'Quantity__c':0,'Packed__c':false});
-         helper.showToast(component, event, helper);
-        }
-
+    
+    handleAddItem: function(component, event, helper) {
+        var newItem = event.getParam("item");
+        var action = component.get("c.saveItem");
+        action.setParams({"item": newItem});
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            if (component.isValid() && state === "SUCCESS") {
+                var items = component.get("v.items");
+                items.push(item);
+                component.set("v.items",items);
+            }
+        });
+        $A.enqueueAction(action);
     }
+    
 })
